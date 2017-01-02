@@ -19,7 +19,8 @@ public class ShapeFactory {
     public int width = 25;
     public int height = 25;
 
-    public ShapeFactory(int shape_type) {
+    public ShapeFactory(int shape_type)/*figure type*/
+    {
         switch (shape_type = 5) {
             case 1: {
                 this.shape = ShapeFactory.createStar(3, new Point(0, 0), (double)this.width / 2.0, (double)this.width / 2.0);
@@ -51,7 +52,8 @@ public class ShapeFactory {
                 throw new Error("type is nusupported");
             }
         }
-        switch (shape_type = 7) {
+        switch (shape_type = 7) /*color type*/
+        {
             case 1: {
                 this.stroke = new BasicStroke(3.0f);
                 break;
