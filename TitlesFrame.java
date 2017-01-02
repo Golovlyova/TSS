@@ -1,34 +1,28 @@
 /*
  * Decompiled with CFR 0_118.
  */
-import java.awt.Component;
-import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
-public class TitlesFrame
+class TitlesFrame
 extends JFrame {
-    public TitlesFrame() {
+    private TitlesFrame() {
         this.initUI();
     }
 
     private void initUI()/*UI change*/
     {
         this.setTitle("\u041a\u0440\u0438\u0432\u044b\u0435 \u0444\u0438\u0433\u0443\u0440\u044b");
-        this.setDefaultCloseOperation(3);
-        this.add(new TitlesPanel(78));
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        this.add(new TitlesPanel());
         this.setSize(350, 350);
         this.setLocationRelativeTo(null);
     }
 
     public static void main(String[] args)/*Utilite runer*/
     {
-        SwingUtilities.invokeLater(new Runnable(){
-
-            @Override
-            public void run() {
-                TitlesFrame ps = new TitlesFrame();
-                ps.setVisible(true);
-            }
+        SwingUtilities.invokeLater(() -> {
+            TitlesFrame ps = new TitlesFrame();
+            ps.setVisible(true);
         });
     }
 
