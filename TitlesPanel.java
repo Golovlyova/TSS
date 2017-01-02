@@ -39,7 +39,8 @@ implements ActionListener {
         }
     }
 
-    private void doDrawing(Graphics g) {
+    private void doDrawing(Graphics g) /*grafic change*/
+    {
         this.is_done = false;
         this.g2d = (Graphics2D)g;
         this.g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
@@ -71,7 +72,7 @@ implements ActionListener {
         this.is_done = true;
     }
 
-    @Override
+    @Override /*override must have*/
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         this.doDrawing(g);
